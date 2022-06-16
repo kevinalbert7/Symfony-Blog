@@ -29,7 +29,7 @@ class ArticleFixtures extends Fixture
                 $article = new Article();
 
                 // On veut ajouter 5 paragraphes (qui sont des tableaux) et les lier avec un début de <p> et une fin de </p>
-                $content = '<p>' . join($faker->paragraphs(5), '</p> <p>') . '</p>';
+                $content = '<p>' . join($faker->paragraphs(5), '</p><p>') . '</p>';
 
                 $article->setTitle($faker->sentence())
                     ->setContent($content)
